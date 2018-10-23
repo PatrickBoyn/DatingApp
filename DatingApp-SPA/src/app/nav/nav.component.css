@@ -1,0 +1,17 @@
+.dropdown-toggle{
+  cursor: pointer;
+}
+.navbar{
+  background-color: red !important;
+}
+a{
+  color:white;
+}
+a:active{
+  background-color:red;
+}
+span img {
+  max-height: 50px;
+  border: 2px solid #FFFF99;
+  display: inline;
+}
