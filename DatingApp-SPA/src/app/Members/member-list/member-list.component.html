@@ -17,16 +17,16 @@
     <!-- Show age -->
     <div class="form-group px-2">
       <label for="gender">Show:</label>
-      <select name="gender" id="gender" class="form-control ml-1" style="width: 130px">
+      <select name="gender" id="gender" class="form-control ml-1" style="width: 130px" [(ngModel)]="userParams.gender">
         <!-- Gender, filled in programatically -->
-        <option>
-
+        <option *ngFor="let gender of genderList" [value]="gender.value">
+          {{gender.display}}
         </option>
       </select>
     </div>
     <!-- Submit filters -->
     <button type="submit" class="btn btn-dark" style="margin-left:10px">Apply Filters</button>
-    <button type="button" class="btn btn-warning" style="margin-left:10px">Reset Filter</button>
+    <button type="button" class="btn btn-warning" (click)="resetFilters()" style="margin-left:10px">Reset Filter</button>
   </form>
   <div class="row">
     <div *ngFor="let user of users" class="col-lg-2 col-md-3 col-sm-6">
