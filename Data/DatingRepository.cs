@@ -44,6 +44,11 @@ namespace DatingApp.Data
             return await _context.Photos.Where(u => u.UserId == userId).FirstOrDefaultAsync(p => p.IsMain);
         }
 
+        public async Task<Like> GetLike(int userId, int recipientId)
+        {
+            return await _context.Likes.FirstAsync(u => u.LikerId == userId && u.LikeeId == recipientId);
+        }
+
         public async Task<PagedList<User>> GetUsers(UserParams userParams)
         {
             var users = _context.Users.Include(p => p.Photos).OrderByDescending(u => u.LastActive).AsQueryable();
@@ -79,5 +84,7 @@ namespace DatingApp.Data
         {
             return await _context.SaveChangesAsync() > 0;
         }
+        
+        
     }
 }
