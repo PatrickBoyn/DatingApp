@@ -18,7 +18,7 @@
   background:none !important;
   color: #333;
 }
-.member-tabset > .nav-tabs > li.open >a > i, .member-tabset > .nav-tabs > li:hover >a > i {
+.member-tabset > .nav-tabs > li.open > a > i, .member-tabset > .nav-tabs > li:hover >a > i {
   color: #a6a6a6;
 }
 .member-tabset > .nav-tabs > li.open .dropdown-menu, .member-tabset >.nav-tabs > li:hover .dropdown{
@@ -41,4 +41,11 @@
   border:0;
   border-top: 1px solid #eee;
   padding: 15px 0;
+}
+.page-item.active .page-link{
+  background-color:#772953;
+  border:1px solid red;
+}
+.page-item .page-link{
+  color:red;
 }
