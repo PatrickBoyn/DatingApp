@@ -37,6 +37,7 @@ import {PreventUnsavedChanges} from "./_guards/prevent-unsaved-changes-guard";
 import { PhotoEditorComponent } from './Members/photo-editor/photo-editor.component';
 import {FileUploadModule} from "ng2-file-upload";
 import {TimeAgoPipe} from "time-ago-pipe";
+import {ListResolver} from "./_resolvers/lists.resolver";
 
 
 export function tokenGetter(){
@@ -89,7 +90,8 @@ export function tokenGetter(){
     MemberListResolver,
     MemberEditResolver,
     PreventUnsavedChanges,
-    PaginationConfig
+    PaginationConfig,
+    ListResolver
   ],
   bootstrap: [AppComponent]
 })
